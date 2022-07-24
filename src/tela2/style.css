@@ -85,8 +85,39 @@
     padding: 1.5rem;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 }
 
 .reply-task img {
     align-self: flex-end;
+}
+
+.quests-reply {
+    width: 27.5rem;
+    height: 4rem;
+    background-color: #ffffd4;
+    display: flex;
+    justify-content: space-between;
+}
+
+.not,
+.correct,
+.remember {
+    height: 3.8rem;
+    width: 8.7rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.not {
+    background-color: red;
+}
+
+.remember {
+    background-color: #ff922e;
+}
+
+.correct {
+    background-color: #2fbe34;
 }

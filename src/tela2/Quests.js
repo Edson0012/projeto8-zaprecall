@@ -1,6 +1,7 @@
 import play from "../img/play.svg";
 import React from "react";
 import rotate from "../img/rotate.svg";
+import Rotate from "./Rotate";
 
 export default function Quests({ task, reply }) {
     const [quizz, setQuizz] = React.useState("quizz");
@@ -10,18 +11,14 @@ export default function Quests({ task, reply }) {
 
     return (
         <>
-            <div className={quizz}>
-                <p>
-                    {quizz === "quizz"
-                        ? `Pergunta ${reply + 1}`
-                        : task.question}
-                </p>
-                ;
-                <img
-                    src={quizz === "quizz" ? play : rotate}
-                    onClick={replyQuizz}
-                />
-            </div>
+            {quizz === "quizz" ? (
+                <div className={quizz}>
+                    <p>Pergunta {reply + 1}</p>
+                    <img src={play} onClick={replyQuizz} />
+                </div>
+            ) : (
+                <Rotate task={task} rot={rotate} quizz={quizz} />
+            )}
         </>
     );
 }
