@@ -33,31 +33,4 @@ const task = [
     },
 ];
 
-const reply = [
-    {
-        P: "Pergunta 1",
-    },
-    {
-        P: "Pergunta 2",
-    },
-    {
-        P: "Pergunta 3",
-    },
-    {
-        P: "Pergunta 4",
-    },
-    {
-        P: "Pergunta 5",
-    },
-    {
-        P: "Pergunta 6",
-    },
-    {
-        P: "Pergunta 7",
-    },
-    {
-        P: "Pergunta 8",
-    },
-];
-
 export default task;

@@ -57,11 +57,36 @@
     border-radius: 5px;
 }
 
+.quizz img {
+    cursor: pointer;
+}
+
 .finish {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+
     width: 37.5rem;
     height: 7rem;
 
     margin: 10.9rem auto 0rem auto;
     background: #ffffff;
     box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.reply-task {
+    width: 29.9rem;
+    height: 13.1rem;
+    background-color: #ffffd4;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.reply-task img {
+    align-self: flex-end;
 }

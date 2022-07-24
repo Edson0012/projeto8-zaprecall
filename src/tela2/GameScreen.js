@@ -2,6 +2,7 @@ import zap from "../img/zap.svg";
 import "./style.css";
 import task from "./Task";
 import Quests from "./Quests";
+import React from "react";
 
 export default function GameScreen() {
     return (
