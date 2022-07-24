@@ -121,3 +121,31 @@
 .correct {
     background-color: #2fbe34;
 }
+
+.finish-quest {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+.p-decoration,
+.p-correct,
+.p-remmember {
+    text-decoration: line-through;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+}
+
+.p-decoration {
+    color: #ff3030;
+}
+
+.p-correct {
+    color: #2fbe34;
+}
+
+.p-remmember {
+    color: #ff922e;
+}
