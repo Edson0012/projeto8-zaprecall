@@ -1,9 +1,19 @@
 import React from "react";
 
-export default function Rotate({ task, rot, setQuizz, setQuestion }) {
+export default function Rotate({
+    task,
+    rot,
+    setQuizz,
+    setQuestion,
+    setFinish,
+    setDeck,
+}) {
     const change = (color) => {
         setQuizz(true);
         setQuestion(color);
+        setDeck((deck) => {
+            return [...deck, color];
+        });
     };
 
     const [rota, setRota] = React.useState(false);
