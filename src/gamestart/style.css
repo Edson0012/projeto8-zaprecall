@@ -1,0 +1,36 @@
+.screen {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 31.8rem;
+    margin-top: 14.8rem;
+    background-color: coral;
+}
+
+.screen h1 {
+    font-weight: 400;
+    font-size: 3.6rem;
+    line-height: 4.5rem;
+    letter-spacing: -0.012rem;
+
+    color: #ffffff;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24.6rem;
+    height: 5.4rem;
+
+    color: #d70900;
+    font-weight: 400;
+    font-size: 1.8rem;
+    cursor: pointer;
+
+    background: #ffffff;
+    border: 0.1rem solid #d70900;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 0.5rem;
+}
