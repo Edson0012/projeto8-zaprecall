@@ -19,11 +19,19 @@ export default function GameScreen() {
                 <img src={zap} />
                 <h1>ZapRecall</h1>
             </div>
-            <section className="body">
-                {task.map((data, index) => (
-                    <Quests reply={index} task={data} setDeck={setDeck} />
-                ))}
-            </section>
+            {deck.length === 4 ? (
+                <section className="body2">
+                    {task.map((data, index) => (
+                        <Quests reply={index} task={data} setDeck={setDeck} />
+                    ))}
+                </section>
+            ) : (
+                <section className="body">
+                    {task.map((data, index) => (
+                        <Quests reply={index} task={data} setDeck={setDeck} />
+                    ))}
+                </section>
+            )}
             {deck.length === 4 ? (
                 <footer className="got-quests">
                     <Got party={party} sad={sad} deck={deck} />

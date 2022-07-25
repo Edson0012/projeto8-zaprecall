@@ -28,17 +28,22 @@
     color: #ffffff;
 }
 
-.body {
+.body,
+.body2 {
     width: 55%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 0px auto 7.5rem auto;
     gap: 2.5rem;
 }
 
-.body p {
+.body {
+    margin: 0px auto 7.5rem auto;
+}
+
+.body,
+.body2 p {
     font-weight: 700;
     font-size: 16px;
     line-height: 19px;
