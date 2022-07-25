@@ -6,7 +6,7 @@ import not from "../img/not.svg";
 import correct from "../img/correct.svg";
 import remmember from "../img/remmember.svg";
 
-export default function Quests({ task, reply, setFinish, setDeck }) {
+export default function Quests({ task, reply, setDeck }) {
     const [quizz, setQuizz] = React.useState(true);
     const [question, setQuestion] = React.useState("p-quest");
     const replyQuizz = () => {
@@ -32,7 +32,6 @@ export default function Quests({ task, reply, setFinish, setDeck }) {
                     setQuizz={setQuizz}
                     setQuestion={setQuestion}
                     setDeck={setDeck}
-                    setFinish={setFinish}
                 />
             )}
         </>

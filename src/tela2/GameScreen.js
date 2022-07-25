@@ -11,8 +11,6 @@ import Got from "./Got";
 import sad from "../img/sad.svg";
 
 export default function GameScreen() {
-    const [finish, setFinish] = React.useState("finish");
-
     const [deck, setDeck] = React.useState([]);
 
     return (
@@ -23,12 +21,7 @@ export default function GameScreen() {
             </div>
             <section className="body">
                 {task.map((data, index) => (
-                    <Quests
-                        reply={index}
-                        task={data}
-                        setFinish={setFinish}
-                        setDeck={setDeck}
-                    />
+                    <Quests reply={index} task={data} setDeck={setDeck} />
                 ))}
             </section>
             {deck.length === 4 ? (
@@ -54,7 +47,7 @@ export default function GameScreen() {
                     </div>
                 </footer>
             ) : (
-                <footer className={finish}>
+                <footer className="finish">
                     {deck.length}/4 CONCLUÍDOS
                     {deck.length > 0 && (
                         <div className="answered">

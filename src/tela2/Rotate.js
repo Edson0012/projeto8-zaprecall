@@ -1,13 +1,6 @@
 import React from "react";
 
-export default function Rotate({
-    task,
-    rot,
-    setQuizz,
-    setQuestion,
-    setFinish,
-    setDeck,
-}) {
+export default function Rotate({ task, rot, setQuizz, setQuestion, setDeck }) {
     const change = (color) => {
         setQuizz(true);
         setQuestion(color);
@@ -38,7 +31,9 @@ export default function Rotate({
                             className="not"
                             onClick={() => change("p-decoration")}
                         >
-                            Não lembrei
+                            Não
+                            <br />
+                            lembrei
                         </button>
                         <button
                             className="remember "
