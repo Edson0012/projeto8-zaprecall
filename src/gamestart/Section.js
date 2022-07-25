@@ -17,7 +17,6 @@ export default function Section({ inicial }) {
             >
                 Iniciar Recall!
             </div>
-            <footer></footer>
         </section>
     );
 }
