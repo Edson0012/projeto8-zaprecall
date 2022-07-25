@@ -6,6 +6,10 @@ import React from "react";
 import not from "../img/not.svg";
 import remmember from "../img/remmember.svg";
 import correct from "../img/correct.svg";
+import party from "../img/party.svg";
+import Got from "./Got";
+import sad from "../img/sad.svg";
+
 export default function GameScreen() {
     const [finish, setFinish] = React.useState("finish");
 
@@ -27,26 +31,52 @@ export default function GameScreen() {
                     />
                 ))}
             </section>
-            <footer className={finish}>
-                {deck.length}/8 CONCLUÍDOS
-                <div className="answered">
-                    {deck.map((data) => {
-                        switch (data) {
-                            case "p-decoration":
-                                return <img src={not} />;
+            {deck.length === 4 ? (
+                <footer className="got-quests">
+                    <Got party={party} sad={sad} deck={deck} />
+                    {deck.length}/4 CONCLUÍDOS
+                    <div className="answered">
+                        {deck.map((data) => {
+                            switch (data) {
+                                case "p-decoration":
+                                    return <img src={not} />;
 
-                            case "p-correct":
-                                return <img src={correct} />;
+                                case "p-correct":
+                                    return <img src={correct} />;
 
-                            case "p-remmember":
-                                return <img src={remmember} />;
+                                case "p-remmember":
+                                    return <img src={remmember} />;
 
-                            default:
-                                break;
-                        }
-                    })}
-                </div>
-            </footer>
+                                default:
+                                    break;
+                            }
+                        })}
+                    </div>
+                </footer>
+            ) : (
+                <footer className={finish}>
+                    {deck.length}/4 CONCLUÍDOS
+                    {deck.length > 0 && (
+                        <div className="answered">
+                            {deck.map((data) => {
+                                switch (data) {
+                                    case "p-decoration":
+                                        return <img src={not} />;
+
+                                    case "p-correct":
+                                        return <img src={correct} />;
+
+                                    case "p-remmember":
+                                        return <img src={remmember} />;
+
+                                    default:
+                                        break;
+                                }
+                            })}
+                        </div>
+                    )}
+                </footer>
+            )}
         </main>
     );
 }
