@@ -35,4 +35,4 @@ const task = [
 
 task.sort(() => Math.random() - 0.5);
 
-export default task.slice(0, 4);
+export default task;

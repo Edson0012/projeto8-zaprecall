@@ -19,7 +19,7 @@ export default function GameScreen() {
                 <img src={zap} />
                 <h1>ZapRecall</h1>
             </div>
-            {deck.length === 4 ? (
+            {deck.length === 8 ? (
                 <section className="body2">
                     {task.map((data, index) => (
                         <Quests reply={index} task={data} setDeck={setDeck} />
@@ -32,10 +32,10 @@ export default function GameScreen() {
                     ))}
                 </section>
             )}
-            {deck.length === 4 ? (
+            {deck.length === 8 ? (
                 <footer className="got-quests">
                     <Got party={party} sad={sad} deck={deck} />
-                    {deck.length}/4 CONCLUÍDOS
+                    {deck.length}/8 CONCLUÍDOS
                     <div className="answered">
                         {deck.map((data) => {
                             switch (data) {
@@ -56,7 +56,7 @@ export default function GameScreen() {
                 </footer>
             ) : (
                 <footer className="finish">
-                    {deck.length}/4 CONCLUÍDOS
+                    {deck.length}/8 CONCLUÍDOS
                     {deck.length > 0 && (
                         <div className="answered">
                             {deck.map((data) => {
